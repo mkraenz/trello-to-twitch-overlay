@@ -1,0 +1,70 @@
+/* credits to https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_todo */
+
+body {
+  margin: 0;
+  max-width: 250px;
+}
+
+h1 {
+  margin: 0;
+  margin-left: 40px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  max-height: 280px;
+  overflow-y: scroll;
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+ul::-webkit-scrollbar {
+  display: none;
+}
+
+ul li {
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  list-style-type: none;
+  background: #eeeeee88;
+  font-size: 18px;
+  transition: 0.2s;
+
+  /* make the list items unselectable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Set all odd list items to a different color (zebra-stripes) */
+ul li:nth-child(odd) {
+  background: #f9f9f988;
+}
+
+ul li.doing {
+  background: #d0f0c088;
+  font-size: x-large;
+  font-weight: bold;
+}
+
+ul li.done {
+  background: #eeeeee88;
+  text-decoration: line-through;
+}
+
+/* Add a "done" mark when clicked on */
+ul li.done::before {
+  content: "";
+  position: absolute;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
