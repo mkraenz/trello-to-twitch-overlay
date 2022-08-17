@@ -77,7 +77,7 @@ const render = (state) => {
     getListItem(card.name, "doing")
   );
   const doneNodes = state.done.map((card) => getListItem(card.name, "done"));
-  listNode.append(...todoNodes, ...doingNodes, ...doneNodes);
+  listNode.append(...doingNodes, ...todoNodes, ...doneNodes);
 };
 
 const main = async () => {
@@ -163,6 +163,13 @@ const main = async () => {
             (cards) => cards.id !== bestMatchingCard.item.id
           );
         } else say(`No results found for "${searchTerm}"`);
+      }
+
+      if (/^!archivedone/.test(msg)) {
+        for (const card of state.done) {
+          await TrelloApi.moveCard(card.id, cfg.archiveListId);
+        }
+        state.done = [];
       }
 
       render(state);

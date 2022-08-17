@@ -13,6 +13,7 @@ Designed for Open Broadcaster Studio (OBS) Browser Overlay. Works in any modern 
 !doing loop
 !done main
 !refreshtodos
+!archivedone
 ```
 
 ### In Detail

@@ -1,1 +1,5 @@
 secret.http
+
+# Only here to not show them on stream
+global-config.js
+global-config.back.js
