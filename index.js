@@ -102,6 +102,10 @@ const main = async () => {
   client.connect();
   await populateState();
   render(state);
+  window.setInterval(async () => {
+    await populateState();
+    render(state);
+  }, 60000)
 
   const say = (text) => {
     console.log(text);

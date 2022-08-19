@@ -1,13 +1,13 @@
 /* credits to https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_todo */
 
+html {
+  background-color: #272727;
+}
+
 body {
   margin: 0;
   max-width: 250px;
-}
-
-h1 {
-  margin: 0;
-  margin-left: 40px;
+  background-color: #272727;
 }
 
 ul {
@@ -27,11 +27,13 @@ ul::-webkit-scrollbar {
 
 ul li {
   position: relative;
-  padding: 12px 8px 12px 40px;
+  padding: 12px 4px 12px 12px;
   list-style-type: none;
-  background: #eeeeee88;
+  background: #272727;
   font-size: 18px;
   transition: 0.2s;
+  color: #ffffff;
+  opacity: 0.80;
 
   /* make the list items unselectable */
   -webkit-user-select: none;
@@ -42,17 +44,18 @@ ul li {
 
 /* Set all odd list items to a different color (zebra-stripes) */
 ul li:nth-child(odd) {
-  background: #f9f9f988;
+  background: #272727;
 }
 
 ul li.doing {
-  background: #d0f0c088;
+  background: #272727;
   font-size: x-large;
   font-weight: bold;
 }
 
 ul li.done {
-  background: #eeeeee88;
+  padding: 12px 4px 12px 40px;
+  background: #272727;
   text-decoration: line-through;
 }
 
